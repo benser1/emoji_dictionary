@@ -21,19 +21,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello World" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-ch-Prg">
-                                <rect key="frame" x="139" y="170" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-K0-uAS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cvZ-K0-uAS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ch-Ts-wR4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cvZ-K0-uAS" secondAttribute="bottom" id="9Od-E1-2Jz"/>
+                            <constraint firstItem="cvZ-K0-uAS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bUo-g2-QvG"/>
+                            <constraint firstAttribute="trailing" secondItem="cvZ-K0-uAS" secondAttribute="trailing" id="q96-9d-5oe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiTableView" destination="cvZ-K0-uAS" id="HzT-bs-Wuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jvo-u0-5Bl">
+            <objects>
+                <viewController id="egn-1M-8so" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yTe-zg-alA"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0W-h2-VU2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TyM-qL-eFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-UE-bcB">
+                                <rect key="frame" x="78.5" y="60" width="218" height="239"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-1U-N67">
+                                <rect key="frame" x="123.5" y="329" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1Z-1U-N67" firstAttribute="top" secondItem="jmE-UE-bcB" secondAttribute="bottom" constant="30" id="94M-pL-y46"/>
+                            <constraint firstItem="jmE-UE-bcB" firstAttribute="centerX" secondItem="TyM-qL-eFZ" secondAttribute="centerX" id="ZhA-UT-KNn"/>
+                            <constraint firstItem="jmE-UE-bcB" firstAttribute="top" secondItem="yTe-zg-alA" secondAttribute="bottom" constant="40" id="cc1-gw-c4W"/>
+                            <constraint firstItem="b1Z-1U-N67" firstAttribute="centerX" secondItem="TyM-qL-eFZ" secondAttribute="centerX" id="x6L-gq-eBC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mm-HN-xxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="29.23538230884558"/>
         </scene>
     </scenes>
 </document>
